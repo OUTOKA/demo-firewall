@@ -24,3 +24,17 @@
   - Finir la maquette cisco packet tracer
 * Difficultés rencontrées : Problème d'accessibilité à des machines linux
 * Remarques sur la séances (membre absent, pbe technique, ...) : RAS
+
+## Séance n° 2
+
+* 03/03/2025 - 8h30 -> 11h30 , 14h30 -> 17h30
+* Travail effectué :
+  - Mise en place Vagrant
+  - Fin maquette pkt
+  - début modif Vagrantfile client et server
+* A faire à la prochaine séance :
+  - Finaliser les Vagrantfile
+  - Configuration du Firewall
+  - Script mise en place du firewall
+* Difficultés rencontrées : Fonctionnement de Vagrant, pb pour utiliser Virtualbox
+* Remarques sur la séances (membre absent, pbe technique, ...) : RAS
