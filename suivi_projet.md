@@ -38,3 +38,16 @@
   - Script mise en place du firewall
 * Difficultés rencontrées : Fonctionnement de Vagrant, pb pour utiliser Virtualbox
 * Remarques sur la séances (membre absent, pbe technique, ...) : RAS
+
+## Séance n° 3
+
+* 03/03/2025 - 13h -> 16h
+* Travail effectué :
+  - Finalisation Vagrantfile
+  - Liaison entre le client et le server
+  - début script ufw pour la mise en place du firewall: pour l'instant tout est bloqué sauf le SSH
+* A faire à la prochaine séance :
+  - Autoriser le SSH seulement depuis l'hôte
+  - Finir configuration du Firewall pour créer DMZ
+* Difficultés rencontrées : Aucune
+* Remarques sur la séances (membre absent, pbe technique, ...) : RAS
