@@ -27,7 +27,7 @@
 
 ## Séance n° 2
 
-* 03/03/2025 - 8h30 -> 11h30 , 14h30 -> 17h30
+* 05/03/2025 - 8h30 -> 11h30 , 14h30 -> 17h30
 * Travail effectué :
   - Mise en place Vagrant
   - Fin maquette pkt
@@ -41,7 +41,7 @@
 
 ## Séance n° 3
 
-* 03/03/2025 - 13h -> 16h
+* 06/03/2025 - 13h -> 16h
 * Travail effectué :
   - Finalisation Vagrantfile
   - Liaison entre le client et le server
@@ -49,5 +49,34 @@
 * A faire à la prochaine séance :
   - Autoriser le SSH seulement depuis l'hôte
   - Finir configuration du Firewall pour créer DMZ
+* Difficultés rencontrées : Aucune
+* Remarques sur la séances (membre absent, pbe technique, ...) : RAS
+
+## Séance n° 4
+
+* 07/03/2025 - 8h30 -> 11h30
+* Travail effectué :
+  - Finalisation Vagrantfile
+  - Liaison entre le client et le server
+  - test ufw pour la mise en place du firewall: modif des permissions pour le ssh.
+* A faire à la prochaine séance :
+  - Autoriser le SSH seulement depuis l'hôte
+  - Finir configuration du Firewall pour créer DMZ
+* Difficultés rencontrées : Pb de permissions ufw 
+* Remarques sur la séances (membre absent, pbe technique, ...) : Antoine Didierjean abs la majorité de la séance
+
+## Séance n° 5
+
+* 10/03/2025 - 8h30 -> 11h30
+* Travail effectué :
+  - Configuration ufw pour autoriser le ssh seulement depuis l'hôte et permettre au client d'accéder au serveur web uniquement
+  - modif git pour avoir les bons dossiers
+  - Ajout de nmap dans le Vagrantfile
+  - Premier tests avec Nmap
+  - modif script ufw 
+* A faire à la prochaine séance :
+  - Déterminer les failles liées à NGINX
+  - Finir script mise en place du firewall
+  - script test d'intrusion pour démonstration firewall
 * Difficultés rencontrées : Aucune
 * Remarques sur la séances (membre absent, pbe technique, ...) : RAS
