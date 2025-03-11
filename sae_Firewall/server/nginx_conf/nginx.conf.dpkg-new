@@ -58,30 +58,6 @@ http {
 
 	include /etc/nginx/conf.d/*.conf;
 	include /etc/nginx/sites-enabled/*;
-
-	# éviter les attaques par injection
-	server {
-    	location / {
- 			limit_req zone=one burst=20;
-    	}
-	}
-	server {
-    	# … autres paramètres de configuration …
-    	location / {
-        	sub_filter '<script>' '<disabled>';
-        	sub_filter_once off;
-    	}
-	}
-
-	# Désactivation listing des répertoires
-	autoindex off;
-
-	# Eviter les attaques de type Man in the middle
-	add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
-
-	# Limitation à 10 requêts par secondes et par IP pour éviter les attaques DDoS
-	limit_req_zone $binary_remote_addr zone=one:10m rate=10r/s;
-
 }
 
 

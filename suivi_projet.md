@@ -80,3 +80,17 @@
   - script test d'intrusion pour démonstration firewall
 * Difficultés rencontrées : Aucune
 * Remarques sur la séances (membre absent, pbe technique, ...) : RAS
+
+## Séance n° 6
+
+* 11/03/2025 - 8h30 -> 11h30
+* Travail effectué :
+  - Sécurisation serveur web
+  - Création d'un fichier monter entre la machine hote et la vm pour garder la configuration du serveur web
+  - Etude des failles de sécurité d'un serveur web
+* A faire à la prochaine séance :
+  - DMZ
+  - Finir script mise en place du firewall
+  - script test d'intrusion pour démonstration firewall
+* Difficultés rencontrées : Problème lors de la relance du serveur web
+* Remarques sur la séances (membre absent, pbe technique, ...) : RAS
