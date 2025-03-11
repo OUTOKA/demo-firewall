@@ -46,6 +46,8 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
    config.vm.synced_folder "/home/didieant/demo-firewall/sae_Firewall/server/script", "/home/vagrant/script_ufw"
+   config.vm.synced_folder "/home/didieant/demo-firewall/sae_Firewall/server/nginx", "/var/www/html"
+   config.vm.synced_folder "/home/didieant/demo-firewall/sae_Firewall/server/nginx_conf", "/etc/nginx"
 
   # Disable the default share of the current code directory. Doing this
   # provides improved isolation between the vagrant box and your host
