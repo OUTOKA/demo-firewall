@@ -94,3 +94,17 @@
   - script test d'intrusion pour démonstration firewall
 * Difficultés rencontrées : Problème lors de la relance du serveur web
 * Remarques sur la séances (membre absent, pbe technique, ...) : RAS
+
+## Séance n° 7
+
+* 12/03/2025 - 8h30 -> 11h30
+* Travail effectué :
+  - Création machine DMZ
+  - Création de sous réseaux
+  - Modif firewall
+* A faire à la prochaine séance :
+  - Continuer DMZ
+  - Finir script mise en place du firewall
+  - script test d'intrusion pour démonstration firewall
+* Difficultés rencontrées : Aucun
+* Remarques sur la séances (membre absent, pbe technique, ...) : RAS
