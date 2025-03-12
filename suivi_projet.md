@@ -108,3 +108,18 @@
   - script test d'intrusion pour démonstration firewall
 * Difficultés rencontrées : Aucun
 * Remarques sur la séances (membre absent, pbe technique, ...) : RAS
+
+## Séance n° 8
+
+* 12/03/2025 - 13h -> 16h
+* Travail effectué :
+  - Config sous-réseaux
+  - Avancement sur DMZ
+* A faire à la prochaine séance :
+  - Doc
+  - Finir script mise en place du firewall
+  - script test d'intrusion pour démonstration firewall
+  - Finir mise en place DMZ
+  - Script test config Réseau
+* Difficultés rencontrées : Pb avec curl, pas de solution trouvée.
+* Remarques sur la séances (membre absent, pbe technique, ...) : RAS
