@@ -35,5 +35,3 @@
 **Pour une grande entreprise/Datacenter** → Cisco, Palo Alto, Juniper  
 **Si vous voulez du top niveau en cybersécurité** → Palo Alto ou Check Point  
 **Si vous cherchez un bon compromis** → Fortinet ou Sophos  
-
-Besoin d'une recommandation plus précise selon un besoin particulier ?
