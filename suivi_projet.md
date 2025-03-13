@@ -123,3 +123,13 @@
   - Script test config Réseau
 * Difficultés rencontrées : Pb avec curl, pas de solution trouvée.
 * Remarques sur la séances (membre absent, pbe technique, ...) : RAS
+
+## Séance n° 9
+
+* 13/03/2025 - 13h -> 16h
+* Travail effectué :
+  - finalisation script
+* A faire à la prochaine séance :
+  - Préparer présentation.
+* Difficultés rencontrées : RAS
+* Remarques sur la séances (membre absent, pbe technique, ...) : RAS
