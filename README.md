@@ -2,6 +2,26 @@
 
 # Mise en place d'un Firewall
 
+## Arborescence repo du projet:
+````
+demo_firewall
+│
+└── sae_Firewall
+    │
+    ├── server
+    │   ├── script
+    │   ├── nginx
+    │   └── nginx_conf
+    │
+    ├── client
+    │   └── script
+    │
+    └── dmz
+        └── nginx
+````
+          
+## Maquette du réseau:
+
 ![SAE61 - Schéma](https://github.com/user-attachments/assets/09b862bc-f514-4513-b97e-2854d446fbaa)
 
 
