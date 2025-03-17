@@ -25,7 +25,7 @@ demo_firewall
 - /demo_firewall/sae-Firewall/server/nginx: Répertoire monté avec la VM server quicontient le index.html pour la page de présentation du serveur web
 - /demo_firewall/sae-Firewall/server/nginx_conf: Répertoire monté avec la VM server quicontient le fichier de configuration nginx.conf qui remplace automatiquement le fichier de base moins sécurisé au lancement de la VM
 - /demo_firewall/sae-Firewall/client/script: Répertoire monté avec la VM client qui contient le script qui permet de réaliser les tests en lienavec le firewall
-- /demo_firewall/sae-Firewall/dmz/nginx_conf: Même répertoire que pour le server monté avec la VM DMZ poure remplacer le fichier de configuration nginx.conf du server public
+- /demo_firewall/sae-Firewall/dmz/nginx_conf: Même répertoire que pour le server monté avec la VM DMZ pour remplacer le fichier de configuration nginx.conf du server public
 
 ## Maquette du réseau:
 
