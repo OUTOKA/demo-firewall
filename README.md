@@ -19,11 +19,80 @@ demo_firewall
     └── dmz
         └── nginx
 ````
-          
+### Les répertoires importants:
+
+- /demo_firewall/sae-Firewall/server/script: Répertoire monté avec la VM server qui contient le script de mise en place du firewall
+- /demo_firewall/sae-Firewall/server/nginx: Répertoire monté avec la VM server quicontient le index.html pour la page de présentation du serveur web
+- /demo_firewall/sae-Firewall/server/nginx_conf: Répertoire monté avec la VM server quicontient le fichier de configuration nginx.conf qui remplace automatiquement le fichier de base moins sécurisé au lancement de la VM
+- /demo_firewall/sae-Firewall/client/script: Répertoire monté avec la VM client qui contient le script qui permet de réaliser les tests en lienavec le firewall
+- /demo_firewall/sae-Firewall/dmz/nginx_conf: Même répertoire que pour le server monté avec la VM DMZ poure remplacer le fichier de configuration nginx.conf du server public
+
 ## Maquette du réseau:
 
 ![SAE61 - Schéma](https://github.com/user-attachments/assets/09b862bc-f514-4513-b97e-2854d446fbaa)
 
+# Mise en place d'une solution de firewall avec UFW
+## Mode d'emploi:
+### Etape 1: Lancement des VM et connexion en ssh
+#### Exécuter les commandes suivantes poour plus de mobilité dans 3 terminaux différents (après avoir cloner le repo):
+
+```` cd /demo_firewall/sae-Firewall/server````
+
+````vagrant up````
+
+````vagrant ssh````
+
+```` cd /demo_firewall/sae-Firewall/client````
+
+````vagrant up````
+
+````vagrant ssh````
+
+```` cd /demo_firewall/sae-Firewall/dmz````
+
+````vagrant up````
+
+````vagrant ssh````
+
+(login: vagrant et mdp: vagrant si besoin)
+
+### Etape 2: Lancement des serveurs web
+
+#### Une fois connecté en ssh sur le sever et sur la machine dmz, exécuter la commande suivante:
+
+````sudo sytemctl start nginx````
+
+### Etape 3: Mise en place du firewall
+
+#### Connecté en ssh sur le sever exécuter les commandes suivantes:
+
+````cd script_ufw````
+
+On donne les droits d'exécution sur le script
+
+````chmod +x script_ufw.sh````
+
+On l'exécute avec les droits root
+
+````sudo ./script_ufw.sh````
+
+### Etape 4: Réalisation des tests
+
+#### Connecté en ssh sur la machine client, exécuter les commandes suivantes:
+
+On donne les droits d'exécution sur le script
+
+````chmod +x test_connectivité.sh````
+
+On exécute le script
+
+````./test_connectivité.sh````
+
+Pour visualiser les derniers tests réalisé sur la machine on peut accéder au journal des tests situé dans le fichier scan-result.csv:
+
+````cat scan-result.csv````
+
+Châque tests commence par la date à laquel il a été réalisé et est séparé du test précédent par trois lignes rouges.
 
 ## Comparaison des différents types de Firewalls
 
