@@ -139,7 +139,7 @@ Cet exemple remplace tous les occurrences de <script> par <disabled> dans les r�
 
 La prochaine étape pour sécuriser le serveur serait de configurer HTTPS sur le server en obtenant un nom de domaine, un certificat ainsi qu'une clé privée.
 
-## Comparaison des différents types de Firewalls
+# Comparaison des différents types de Firewalls
 
 | **Type de Firewall** | **Description** | **Avantages** | **Inconvénients** |
 |----------------------|----------------|---------------|-------------------|
