@@ -94,6 +94,51 @@ Pour visualiser les derniers tests réalisé sur la machine on peut accéder au 
 
 Châque tests commence par la date à laquel il a été réalisé et est séparé du test précédent par trois lignes rouges.
 
+## Sécurisation du serveur NGINX:
+
+1. Désactiver le listing des répertoires
+Par défaut, Nginx affiche le contenu des répertoires lorsqu’il ne trouve pas de fichier index. Cela peut être un problème de sécurité si vous avez des fichiers sensibles dans vos répertoires. Pour désactiver le listing des répertoires, ajoutez cette ligne à votre fichier de configuration Nginx :
+
+```` autoindex off;````
+
+2. Limiter les requêtes de l’utilisateur
+Vous pouvez limiter le nombre de requêtes que les utilisateurs peuvent envoyer à votre serveur pour prévenir les attaques par déni de service (DoS). Voici comment configurer une limite de 10 requêtes par seconde par IP :
+
+````limit_req_zone $binary_remote_addr zone=one:10m rate=10r/s;
+server {
+    # ... autres paramètres de configuration ...
+    location / {
+        limit_req zone=one burst=20;
+    }
+}
+````
+
+3. Activer le module HTTP Strict Transport Security (HSTS)
+Le HSTS est un en-tête HTTP qui indique aux navigateurs de ne pas envoyer de requêtes sur HTTP à votre site, mais uniquement sur HTTPS. Cela peut être utile pour prévenir les attaques de type man-in-the-middle. Pour activer le HSTS sur votre serveur Nginx, ajoutez cette ligne à votre fichier de configuration :
+
+````add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;````
+
+4. Activer la protection contre les attaques par injection de contenu
+Les attaques par injection de contenu sont des techniques qui permettent à un attaquant de pirater votre site ou votre serveur en injectant du code malveillant dans les requêtes envoyées à votre serveur.
+
+Pour protéger contre ces attaques, vous pouvez utiliser le module ngx_http_sub_module de Nginx. Ce module vous permet de configurer des règles qui vont remplacer ou supprimer certains caractères dangereux dans les requêtes envoyées à votre serveur. Voici comment l’utiliser dans votre fichier de configuration Nginx :
+
+````
+server {
+    # … autres paramètres de configuration …
+    location / {
+        sub_filter '<script>' '<disabled>';
+        sub_filter_once off;
+    }
+}
+````
+
+Cet exemple remplace tous les occurrences de <script> par <disabled> dans les réponses envoyées par votre serveur. Vous pouvez configurer d’autres règles de remplacement pour protéger contre d’autres types d’injections de contenu
+
+#### Toutes ces sécurités ont été mises en place dans le fichier de configuration du server nginx.conf qui remplace le fichier de base dans les VMs server et dmz.
+
+La prochaine étape pour sécuriser le serveur serait de configurer HTTPS sur le server en obtenant un nom de domaine, un certificat ainsi qu'une clé privée.
+
 ## Comparaison des différents types de Firewalls
 
 | **Type de Firewall** | **Description** | **Avantages** | **Inconvénients** |
